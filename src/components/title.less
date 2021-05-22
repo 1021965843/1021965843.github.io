@@ -1,0 +1,34 @@
+.theme(@backcolor: #2E8B57, @titleline: rgba(46, 149, 87, 0.6)) {
+    .title {
+        // margin-top: 10px;
+        .title-header {
+            border-left: 4px solid #ddd;
+            display: flex;
+            margin: 16px 0;
+            padding-left: 40px;
+
+            .title-name {
+                // width: 120px;
+                font-size: 28px;
+                margin-right: 8px;
+                // color: @SeaGreen;
+                color: @backcolor;
+            }
+
+            .title-line {
+                flex: 1;
+                height: 4px;
+                border: 0;
+                background: linear-gradient(90deg, @titleline 0%, #fff 100%);
+                margin: 16px 0;
+            }
+        }
+
+        .content-con {
+            // border-left: 4px solid @SeaGreen;
+            border-left: 4px solid @backcolor;
+            padding-left: 40px;
+
+        }
+    }
+}

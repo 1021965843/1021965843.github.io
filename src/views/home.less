@@ -1,0 +1,135 @@
+.theme(@backcolor:#2E8B57,@fcolor:#fff) {
+    ul {
+        padding-left: 20px;
+      }
+      li {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        &::marker {
+          color: @backcolor;
+        }
+      }
+      .resume-container {
+        width: 800px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+        margin: 20px auto;
+        font-size: 16px;
+        box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
+        .tag {
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          top: -50px;
+          right: -50px;
+          transform: rotate(45deg);
+          span {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            background: @backcolor;
+            width: 100px;
+            text-align: center;
+          }
+        }
+        .info-block {
+          display: flex;
+          justify-content: space-between;
+      
+          .avatar {
+            width: 140px;
+            height: 160px;
+      
+            img {
+              width: 100%;
+              height: 100%;
+              border: 6px solid white;
+            box-shadow: 1px 1px 5px #333333;
+            }
+          }
+        }
+        .info-items {
+          flex: 1;
+      
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            width: 50%;
+          }
+        }
+      }
+      .work-content {
+        padding-left: 80px;
+        li::marker {
+          color: #333;
+        }
+      }
+      .jobs {
+        .job-items {
+          display: flex;
+          margin: 10px 0;
+          div {
+            flex: 1;
+          }
+          .times-range {
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+      .logo {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 20px;
+        font-weight: bold;
+        .logo-CN {
+          font-size: 36px;
+          height: 36px;
+          line-height: 36px;
+          color: @backcolor;
+        }
+        .logo-EN {
+          margin-left: 16px;
+          height: 22px;
+          font-size: 22px;
+          line-height: 22px;
+          color: #ddd;
+        }
+        .lang-box{
+            margin-left: auto;
+        }
+        .lang-box,.theme-box {
+          border: 1px solid #808080;
+          display: flex;
+          align-items: center;
+          height: 20px;
+          line-height: 20px;
+          span {
+            display: inline-block;
+            color: #ddd;
+            cursor: pointer;
+          }
+          span:nth-of-type(2){
+            width: 2px;
+            height: 100%;
+            background: #ddd;
+          }
+      
+          .langActive {
+            color: @backcolor;
+          }
+        }
+        .theme-box{
+            margin :0 33px 0 8px;
+          .themeActive{
+            color: @backcolor;
+          }
+        }
+      }
+  }
+  
