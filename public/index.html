@@ -13,5 +13,14 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      let docEle = document.documentElement;
+      function setRemUnit () {
+        //750/10=75   375/10=37.5
+        docEle.style.fontSize = docEle.clientWidth  + 'px';
+      }
+      setRemUnit();
+      window.addEventListener('resize', setRemUnit);
+    </script>
   </body>
 </html>
