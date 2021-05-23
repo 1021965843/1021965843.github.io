@@ -7,11 +7,11 @@ import i18n from "./i18n/i18n"
 import resetcss from "./assets/css/reset.css";
 
 Vue.config.productionTip = false;
-
+localStorage.setItem("lang", 'zh');
+localStorage.setItem("theme", 'primary');
 Vue.mixin({
   created: function () {
-    document.getElementsByTagName("body")[0].className =
-    "theme-" + localStorage.getItem("theme") || "theme-primary";
+    document.getElementsByTagName("body")[0].className = localStorage.getItem("theme")?"theme-" + localStorage.getItem("theme"):"theme-primary";
   }
 })
 

@@ -1,4 +1,4 @@
-const CompressionPlugin = require("compression-webpack-plugin");
+// const CompressionPlugin = require("compression-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const px2rem = require('postcss-px2rem');
 
@@ -25,7 +25,7 @@ module.exports = {
             filename: "assets/[name].[hash:8].css",
             chunkFilename: "assets/[name].[hash:8].css",
         });
-        config.plugin("extract-css").use(miniCssExtractPlugin);
+        config.plugin("mini-css-extract-plugin").use(miniCssExtractPlugin);
 
         // config.module
         // .rule('less')
@@ -49,16 +49,16 @@ module.exports = {
 
     configureWebpack: (config) => {
         devtool: process.env.NODE_ENV === "development" ? "cheap-module-source-map":"";
-        if (process.env.NODE_ENV === "production") {
-            return {
-                plugins: [
-                    new CompressionPlugin({
-                        test: /\.js$|\.html$|\.css/,
-                        threshold: 1024, // 表示文件大小超过1kb就压缩
-                        deleteOriginAssets: false, // 表示压缩后不删除源文件
-                    }),
-                ],
-            };
-        }
+        // if (process.env.NODE_ENV === "production") {
+        //     return {
+        //         plugins: [
+        //             new CompressionPlugin({
+        //                 test: /\.js$|\.html$|\.css/,
+        //                 threshold: 1024, // 表示文件大小超过1kb就压缩
+        //                 deleteOriginAssets: false, // 表示压缩后不删除源文件
+        //             }),
+        //         ],
+        //     };
+        // }
     }
 };
